@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<h:form id="form">
+		<ui:include src="/carro.xhtml" />
+		<p:panel id="panel" header="Consultar" style="margin-bottom:10px;">
+			
+    <p:dataTable style="background-color: blue;" id="dataTable" var="car" value="#{carroBean.carros}" paginator="true" rows="5"><font></font>
+        <f:facet name="header"><font></font>
+            Carros<font></font>
+        </f:facet><font></font>
+<font></font>
+        <p:column><font></font>
+            <f:facet name="header"><font></font>
+                <h:outputText value="Id" /><font></font>
+            </f:facet><font></font>
+            <h:outputText value="#{car.id}" /><font></font>
+        </p:column><font></font>
+<font></font>
+        <p:column><font></font>
+            <f:facet name="header"><font></font>
+                <h:outputText value="Nome" /><font></font>
+            </f:facet><font></font>
+            <h:outputText value="#{car.nome}" /><font></font>
+        </p:column><font></font>
+<font></font>
+        <p:column><font></font>
+            <f:facet name="header"><font></font>
+                <h:outputText value="Ano" /><font></font>
+            </f:facet><font></font>
+            <h:outputText value="#{car.ano}" /><font></font>
+        </p:column><font></font>
+<font></font>
+        <p:column><font></font>
+            <f:facet name="header"><font></font>
+                <h:outputText value="Placa" /><font></font>
+            </f:facet><font></font>
+            <h:outputText value="#{car.placa}" /><font></font>
+        </p:column><font></font>
+<font></font>
+        <p:column><font></font>
+            <f:facet name="header"><font></font>
+                <h:outputText value="Cor" /><font></font>
+            </f:facet><font></font>
+            <h:outputText value="#{car.cor}" /><font></font>
+        </p:column><font></font>
+         <p:column><font></font>
+            <f:facet name="header"><font></font>
+                <h:outputText value="Qtde" /><font></font>
+            </f:facet><font></font>
+            <h:outputText value="#{car.qtde}" /><font></font>
+        </p:column><font></font>
+    </p:dataTable><font></font>
+<font></font>
+
+				  
+			
+
+		</p:panel>
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<h:form id="form">
+		<ui:include src="/carro.xhtml" />
+		<p:panel id="panel" header="Informe a Placa do Carro para Alterar" style="margin-bottom:10px;">
+			<h:panelGrid columns="1" cellpadding="5">
+				<!-- <h:outputLabel for="nameV" value="Nome Veículo:" />
+				<h:inputText id="nameV" value="#{carroBean.nome}" />
+
+				<h:outputLabel for="anoV" value="Ano Veículo:" />
+				<h:inputText id="anoV" value="#{carroBean.ano}" />
+
+				<h:outputLabel for="corV" value="Cor Veículo:" />
+				<h:inputText id="corV" value="#{carroBean.cor}" />
+
+				<h:outputLabel for="qtdeV" value="Qtde Veículo:" />
+				<h:inputText id="qtdeV" value="#{carroBean.qtde}" />
+ -->
+ 
+ 				<h:outputLabel for="placaV" value="Placa Veículo:" />
+				<h:inputText id="placaV" value="#{carroBean.placa}" />
+
+				
+			</h:panelGrid>
+				
+		
+			<p:commandButton value="Remover" id="save" update="@this"
+					action="#{carroBean.remover}" style="margin-right:20px;"
+					styleClass="ui-priority-primary" resetValues="true" />
+		</p:panel>
+	</h:form>
+
+
+
+
+
+</h:body>
+</html>

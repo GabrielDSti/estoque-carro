@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Carro</title>
+	<h:outputStylesheet name="icons/primeicons.css" library="primefaces"/>
+</h:head>
+<h:body>
+	<!-- <h:form id="form">
+		<h:panelGrid columns="2" cellpadding="5">
+        <p:outputLabel for="orientation" value="Orientation:" />
+        <p:selectOneButton id="orientation" value="#{carroBean.orientacao}" onchange="$('#form').submit()">
+            <f:selectItem itemLabel="Horizontal" itemValue="horizontal" />
+            <f:selectItem itemLabel="Vertical" itemValue="vertical" />
+        </p:selectOneButton>
+    </h:panelGrid>
+	</h:form> -->
+	
+	<p:megaMenu orientation="#{carroBean.orientacao}" style="margin-top:20px">
+    <p:submenu label="Administração" icon="pi pi-check">
+        <p:column>
+            <p:submenu label="Veículos">
+                <p:menuitem value="Inserir" url="/estoque-carro/faces/inserir.xhtml?faces-redirect=true" />
+                <p:menuitem value="Alterar" url="/estoque-carro/faces/alterar.xhtml?faces-redirect=true" />
+                <p:menuitem value="Consultar" url="/estoque-carro/faces/consultar.xhtml?faces-redirect=true" />
+                <p:menuitem value="Remover" url="/estoque-carro/faces/remover.xhtml?faces-redirect=true" />
+            </p:submenu>
+            
+        </p:column>
+    </p:submenu>
+ 
+    
+</p:megaMenu>
+	
+</h:body>
+a
+</html>
